@@ -1,0 +1,18 @@
+{
+    "name": "perrache/reposql",
+    "description": "repoSql",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Perrache\\Reposql\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Piotr Lewandowski",
+            "email": "plew1961@gmail.com"
+        }
+    ],
+    "require": {}
+}
