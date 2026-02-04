@@ -14,5 +14,7 @@
             "email": "plew1961@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-pgsql": "*"
+    }
 }

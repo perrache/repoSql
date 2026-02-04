@@ -2,15 +2,24 @@
 
 namespace Perrache\Reposql;
 
+use PgSql\Connection;
+
 class Sql
 {
-    public function __construct()
-    {
+    private Connection $conn;
 
+    public function __construct(string $conn_string)
+    {
+        $this->conn = pg_connect($conn_string);
     }
 
-    public function simpleQuery($sql)
+    public function ddl(string $sql)
     {
-        return 1;
+        return pg_query($this->conn, $sql);
+    }
+
+    public function dml(string $sql)
+    {
+        return pg_fetch_all(pg_query($this->conn, $sql));
     }
 }
